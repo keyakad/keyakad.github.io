@@ -4,15 +4,70 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-    <title>Example Student's HCDE 439 Physical Computing Page!</title>
+    <title>Keya Kadakia's HCDE 439 Physical Computing Page!</title>
 
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Example Student's Assignment 1!</h1>
+    <h1>Keya Kadakia's Assignment 1!</h1>
     <div class="header">
-      <img src="red-panda.jpg" />
+      <img src="IMG_9987.jpeg" width="400" height="500"/>
       <p>Here is all the documentation for assignment 1!</p>
+      <p>Here are sources I used: <a href="https://www.youtube.com/watch?v=FKekzzj5844">https://www.youtube.com/watch?v=FKekzzj5844</a> and <a href="https://www.youtube.com/watch?v=e1FVSpkw6q4">https://www.youtube.com/watch?v=e1FVSpkw6q4</a> </p>
+      <p> Schematic </p>
+      <img src="IMG_0295.jpg" width="500" height="500"/>
+      <p> Resistor Calulcation: Voltage power = 5V an Voltage drop for Red, Yellow, and Green LED's = 1.8V and Current = 20mA<br>
+      V = 5-1.8 = 3.2V <br>
+      Ohm's Law: V = I x R <br>
+      3.2 = 0.02 x R <br>
+      R = 160 Ohms <br>
+      Therefore, I used 220 Ohms for the resistors. <br>
+      </p>
+      <p> Circuit </p>
+      <img src="IMG_9988.jpeg" width="400" height="500"/>
+      <p> Code Snippet </p>
+      <p> // the setup function runs once when you press reset or power the board <br>
+        void setup() { <br>
+          // Initialize the digital pins as an output <br>
+          pinMode(12, OUTPUT); <br>
+          pinMode(13, OUTPUT);<br>
+          pinMode(11, OUTPUT); <br>
+        }<br>
+        
+        // the loop function runs over and over again forever <br>
+        void loop() { <br>
+          // Turn the red LED on by making the voltage level high <br>
+          digitalWrite(13, HIGH); <br>
+          // Wait for a second <br>
+          delay(1000); <br>                      
+          // Turn the same LED off by making the voltage level low <br>
+          digitalWrite(13, LOW); <br>
+          // Wait for a second <br>
+          delay(1000); <br>      
+          // Turn the green LED on by making the voltage level high <br>
+          digitalWrite(12, HIGH); <br>
+          // Wait for a second <br>
+          delay(1000); <br>
+          // Turn the same LED off by making the voltage level low <br>                 
+          digitalWrite(12, LOW); <br>
+          delay(1000); <br>
+          // Turn the yellow LED on by making the voltage level high <br>
+          digitalWrite(11, HIGH); <br>
+          // Wait for a second <br>
+          delay(1000); <br>
+          // Turn the same LED off by making the voltage levellow <br>
+          digitalWrite(11, LOW); <br>
+          // Wait for a second <br>
+          delay(1000); <br>
+        } <br> </p>
+      <p> Circuit Operation</p>
+      <img src="IMG_9989.gif" width="400" height="500"/>
+      <p> Questions and Answers</p>
+      <p> Draw a graph where the X axis is time and the Y axis is voltage across the LEDs. Draw a line for each of your 3 LEDs.</p>
+      <p> How many LEDs could you blink independently with your Arduino? How much current would that draw?</p>
+      <p> How fast do you need to blink your LEDs until you no longer can tell that they are blinking? <br>
+        Around 3 milliseconds.
+      </p>
     </div>
   </body>
 </html>
